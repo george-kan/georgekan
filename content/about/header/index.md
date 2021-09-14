@@ -3,10 +3,9 @@
 text_align_right: false
 show_title_as_headline: false
 headline: |
-  Hi, my name is Hugo Apéro. Nice to meet you.
+  Hi, my name is George Kanellos. Nice to meet you.
 ---
 
 <!-- this is a subheadline -->
-I'm a Hugo theme you'll want to hang out with. :fr: 
-
-The page you are reading is based on a markdown file- look in `content/about/` to edit. There, look inside the `header`, `main`, and `sidebar` folders to get started building your own "about" page.
+I work as a data scientist at the [European Central Bank](https://www.ecb.europa.eu/home/html/index.en.html) since 2015 and I am mainly focused on data management (duh).
+But aside from work I am interested in other topics such as learning new skills, improving my health and workout regimen, nutrition, books and more. 

@@ -33,7 +33,7 @@ enableEmoji = true
   description = "A modern, beautiful, and easily configurable blog theme for Hugo."
   favicon = "/img/favicon.ico"
   logo = "/img/blogophonic-mark-dark.png"
-  mainSections = ["blog", "project", "talk"]
+  mainSections = ["blog", "project", "books"]
   navallcaps = true
   # show/hide social icons in site header & footer
   # configure social icons and links below in [[params.social]]
@@ -99,6 +99,8 @@ enableEmoji = true
   category = "categories"
   series = "series"
   tag = "tags"
+  
+
 
 [menu]
   # Configure header 
@@ -115,8 +117,8 @@ enableEmoji = true
     weight = 2
   [[menu.header]]
     name = "Book reviews"
-    title = "Book crap"
-    url = "/talk/"
+    title = "Books I've read"
+    url = "/books/"
     weight = 3
   #[[menu.header]]
   #  name = "Collections"
@@ -146,6 +148,10 @@ enableEmoji = true
     title = "Contributors"
     url = "/contributors/"
     weight = 3
+
+
+
+
 
 # see https://gohugo.io/about/hugo-and-gdpr/    
 [privacy]

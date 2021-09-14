@@ -2,19 +2,15 @@
 action_label: Read More &rarr;
 action_link: /about
 action_type: text
-description: Sit down, relax, and get to know Hugo Apéro. Built on top of Blogophonic,
-  we wanted to create a polished Hugo theme with the right features for a true personal
-  website. We set out to create a theme that is a pleasure to learn, and one that
-  helps others get to know you better. It is more than a blog, with flexible custom
-  layouts that help you introduce yourself online.
+description: Hi there! My name is George, welcome to the site! This is my blog where I write about all the things that interest me and I am trying to achieve. I believe in trying to become better (in every sense of the word) and this site is a constant reminder that I need to stick to my conviction.
 image_left: true
 images:
-- img/revoir.jpg
+- excuses.jpg
 show_action_link: true
 show_social_links: true
-subtitle: A Hugo theme you'll want to hang out with
+subtitle: Personal improvement, data science and more
 text_align_left: false
-title: Hugo Apéro
+title: Better every day
 type: home
 ---
 
