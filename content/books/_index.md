@@ -28,6 +28,6 @@ cascade:
   # for single-sidebar layout only
   sidebar:
     text_link_label: View all projects
-    text_link_url: /project/
+    text_link_url: /books/
     show_sidebar_adunit: true # show ad container
 ---
