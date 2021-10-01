@@ -4,44 +4,22 @@ external_link: https://www.amazon.com/Show-Your-Work-Austin-Kleon/dp/076117897X/
 image:
   #caption: '[Hex by Julie Jung](https://www.jungjulie.com/)'
   focal_point: Smart
-summary: Show your work started it all for me. It gives you ideas and encouragement about how to share your progress with others and find an audience for your projects. 
-featured: true
-draft: false
+summary: Show your work started it all for me. It gives you ideas and encouragement about how to share your progress with others and find an audience for your projects.
 tags:
 - books
-- development
+- investing
 title: Show your work!
-# layout options: single or single-sidebar
 layout: single-sidebar
 
-sidebar: 
-  title: A Sidebar for Your Projects
-  description: |
-    Projects can be anything!
-    Check out the _index.md file in the /project folder 
-    to edit this content.
-  author: "The R Markdown Team @RStudio"
-  text_link_label: ""
-  text_link_url: ""
-  show_sidebar_adunit: false # show ad container
+
+sidebar:
+    title: I changed this
+    text_link_label: View all books
+    text_link_url: /books/
+    show_sidebar_adunit: true # show ad container
+
+
 ---
-
-{{< figure src="featured-hex.png" >}}
-
-<table class="collapse ba bw1 b--moon-gray mv4 w-40">
-      <thead>
-        <tr>
-          <th class="f6 fw6 tl ttu pa3">Rating</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="stripe-dark">
-          <td class="pa3">&starf;&starf;&starf;&starf;&starf;</td>
-        </tr>
-      </tbody>
-    </table>
-
-
 ### Worth remembering (tl;dr)
 
 <span style="font-size:larger;font-weight: bold;">
@@ -68,4 +46,5 @@ After that it is all about the logistics of how and what to share. Establishing 
 said process by creating stories they can relate to, accepting and embracing criticism are all covered. 
 I found really interesting the parts about "selling out" (making money out of your work) and accepting that you will need to refine your process over time which can involve scraping or redoing parts already done. Throughout all this though, it 
 is crucial that you keep in the game and don't quit.
+
 
