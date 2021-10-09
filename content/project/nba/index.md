@@ -11,8 +11,8 @@ tags:
 - Feature engineering
 - Feature selection
 - Boosting
-title: What feature matters in the NBA? 
+title: Which features matter in the NBA? 
 layout: single
 
 ---
-<iframe src="https://www.kaggle.com/embed/noobiedatascientist/getting-hooked-with-pytorch-and-grad-cam?kernelSessionId=59064805" height="2000" width = "1400"  display: flex; style="position:relative; left: -350px;" frameborder="0" scrolling="auto" title="Getting hooked with PyTorch and Grad-CAM"></iframe>
+<iframe src="https://www.kaggle.com/embed/noobiedatascientist/feature-selection-in-the-nba?kernelSessionId=64972074" height="2000" width = "1400"  display: flex; style="position:relative; left: -350px;" frameborder="0" scrolling="auto" title="Getting hooked with PyTorch and Grad-CAM"></iframe>
