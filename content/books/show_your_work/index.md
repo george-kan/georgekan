@@ -2,18 +2,21 @@
 date: "2021-09-26T00:00:00Z"
 external_link: https://www.amazon.com/Show-Your-Work-Austin-Kleon/dp/076117897X/ref=sr_1_1?dchild=1&keywords=show+your+work&qid=1632656589&s=books&sr=1-1
 summary: Show your work started it all for me. It gives you ideas and encouragement about how to share your progress with others and find an audience for your projects.
+image:
+   focal_point: smart
 tags:
 - books
 - self-improvement
 title: Show your work!
-layout: single-sidebar
+layout: single
 ---
+![Formspree Logo](featured-hex.jpg)
 
 ### Rating 
 <table class="collapse ba bw1 b--moon-gray w-10">
       <tbody>
         <tr class="stripe-dark w-10">
-          <td class="pa3">&starf;&starf;&starf;&starf;&star;</td>
+          <td class="pa6">&starf;&starf;&starf;&starf;&star;</td>
         </tr>
       </tbody>
     </table>
