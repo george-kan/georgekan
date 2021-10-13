@@ -1,6 +1,6 @@
 ---
 title: Books
-description: "All the books I've bothered to read and write a review for."
+description: "All the books I've read and bothered to write a review for."
 author: ""
 show_post_thumbnail: true
 show_author_byline: true

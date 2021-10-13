@@ -21,7 +21,7 @@ Sam Copeland offers great analyses to many recent and old games. His best of the
 of how the players viewed the game, what the theory was at that time and how the perspective for the same positions has changed since then also with the help of 
 computers.
 
-[Daily does of chess](https://www.youtube.com/channel/UC4qMWG4PuL74u7HgStR22UA)
+[Daily dose of chess](https://www.youtube.com/channel/UC4qMWG4PuL74u7HgStR22UA)
 Really funny chess clips of various streamers, players etc. 3-4 minutes at a time, great for a quick laugh!
 
 <span style="color:blue; font-size:40px"> **Self-improvement** </span>
