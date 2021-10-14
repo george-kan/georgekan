@@ -28,9 +28,20 @@ Really funny chess clips of various streamers, players etc. 3-4 minutes at a tim
 
 [Goal guys](https://www.youtube.com/c/CamTheYam)
 Two brothers (Cam and Brendan) try to improve various aspects of their lives: Sports, focus, reading speed, calisthenics abilities, losing body fat, you name it!
-They have a very entertaining way of describing their plan, difficulties and showing how the overcome them. My only question is always how do they gain the weight 
+They have an entertaining way of describing their plan, difficulties and showing how they overcome them. My only question is always how do they gain the weight 
 back after their workout challenges but I think it comes down to sweets <span> &#128516; </span>
 
 <span style="color:black; font-size:20px">[Ali Abdaal](https://www.youtube.com/c/aliabdaal) </span>
 Ali is a doctor who is obsessed with productivity. He claims (but from what I have seen, it is probably true <span> &#128578;) </span> that he has read every 
 productivity book imaginable. Various tips about improving time management, efficiency, money allocation etc.
+
+<span style="color:blue; font-size:40px"> **Investing** </span>
+
+[The Plain Bagel](https://www.youtube.com/c/ThePlainBagel)
+Richard Coffin (or the plain bagel) tries to translate financial terms and events throughout history (the great depression, the Greek economic crisis, Bitcoin etc.) 
+into plain English. The explanations are very clear and he tries to list both the positives and negatives of the issues he analyses.
+
+[New Money](https://www.youtube.com/c/AussieWealthCreation)
+Great channel for almost daily updates on the stock market and the world of finance. Countless analyses of the portfolios of many famous investors as well as
+helpful explanations about how to interpret these "chess moves".
+

@@ -10,17 +10,16 @@ tags:
 title: Show your work!
 layout: single
 ---
-![Formspree Logo](featured-hex.jpg)
 
-### Rating 
-<table class="collapse ba bw1 b--moon-gray w-10">
-      <tbody>
-        <tr class="stripe-dark w-10">
-          <td class="pa6">&starf;&starf;&starf;&starf;&star;</td>
-        </tr>
-      </tbody>
-    </table>
-	
+
+<div style="height:200px">
+    <p style="float:left;margin: 5px 0px 10px"><img src="featured-hex.jpg" height="200" width="200" border="1px"></p>
+    <p style="width:68%;float:right;color:purple;height:200px;font-size:300%;margin: 5px 0px 10px"> <br />&starf;&starf;&starf;&starf;&star; </p>
+</div>
+
+---
+
+
 ### Worth remembering
 
 <span style="font-size:larger;font-weight: bold;">
