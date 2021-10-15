@@ -12,10 +12,8 @@ layout: single
 ---
 
 
-<div style="height:200px">
-    <p style="float:left;margin: 5px 0px 10px"><img src="featured-hex.jpg" height="200" width="200" border="1px"></p>
-    <p style="width:68%;float:right;color:purple;height:200px;font-size:300%;margin: 5px 0px 10px"> <br />&starf;&starf;&starf;&starf;&star; </p>
-</div>
+<p style="margin:0; "><img src="featured-hex.jpg"></p>
+<p style="color:purple;font-size:300%;margin:0;padding-top:0;padding-bottom:0"> &starf;&starf;&starf;&starf;&star; </p>
 
 ---
 

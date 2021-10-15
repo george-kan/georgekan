@@ -15,4 +15,5 @@ title: Which features matter in the NBA?
 layout: single
 
 ---
-<iframe src="https://www.kaggle.com/embed/noobiedatascientist/feature-selection-in-the-nba?kernelSessionId=64972074" height="2000" width = "1400"  display: flex; style="position:relative; left: -350px;" frameborder="0" scrolling="auto" title="Getting hooked with PyTorch and Grad-CAM"></iframe>
+
+<iframe src="https://www.kaggle.com/embed/noobiedatascientist/feature-selection-in-the-nba?kernelSessionId=64972074" height="800" style="margin: 0 auto; width: 100%; max-width: 950px;" frameborder="0" scrolling="auto" title="Feature selection in the NBA"></iframe>

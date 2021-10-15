@@ -14,4 +14,5 @@ title: The game of kings
 layout: single
 
 ---
-<iframe src="https://www.kaggle.com/embed/noobiedatascientist/analysis-of-lichess-games?kernelSessionId=55683619" height="2000" width = "1400" display: flex; style="position:relative; left: -350px;" frameborder="0" scrolling="auto" title="Analysis of lichess games"></iframe>
+
+<iframe src="https://www.kaggle.com/embed/noobiedatascientist/analysis-of-lichess-games?kernelSessionId=55683619" height="800" style="margin: 0 auto; width: 100%; max-width: 950px;" frameborder="0" scrolling="auto" title="Analysis of lichess games"></iframe>
