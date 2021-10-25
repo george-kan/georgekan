@@ -17,13 +17,13 @@ title: The Psychology of Money
 
 # 🚀 The Book in 3 Sentences
 
-1. Money and investing are emotional topics and therefore optimal allocation is really person specific
+1. Money and investing are emotional topics and therefore optimal allocation is really person-specific
 2. Every investor's best friends are frugality, self-control and a long time horizon for compounding to work its miracles
-3. Dictating how you spend your time is the greatest thing that can money can buy
+3. Dictating how you spend your time is the greatest thing that money can buy
 
 ## Who Should Read It?
 
-This is an amazing book that can help just about anybody. The advice/lessons are presented in a very easy to follow manner with clear narratives. Even if not every piece of advice in the book fits your situation I am certain that the majority will!
+This is an amazing book that can help just about anybody. The lessons are presented in a very easy to follow manner with clear narratives. Even if not all advice in the book is applicable to you, I am willing to bet you will get value out of reading it.
 
 # ☘️ How the Book Changed Me
 
