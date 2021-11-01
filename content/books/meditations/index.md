@@ -6,8 +6,8 @@ image:
 summary: How to live your life and what is imporant in it by one of the greatest Roman emperors. 
 tags:
 - books
-- stoicism
-- life
+- philosophy
+- life advice
 title: Meditations
 ---
 

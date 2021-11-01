@@ -3,7 +3,7 @@
 text_align_right: false
 show_title_as_headline: false
 headline: |
-  Hi, my name is George Kanellos. Nice to meet you.
+  Nice to meet you! I see you want to learn more :)
 ---
 
 <!-- this is a subheadline -->
