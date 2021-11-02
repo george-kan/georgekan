@@ -4,7 +4,7 @@ external_link: https://www.amazon.com/Atomic-Habits-Proven-Build-Break/dp/073521
 image:
   #caption: '[Hex by Julie Jung](https://www.jungjulie.com/)'
   focal_point: Smart
-summary: How to structure your life in order to achieve your long-term ambitious goals one tiny habit at a time
+summary: How to structure your life in order to achieve your long-term ambitious goals one tiny habit at a time.
 tags:
 - books
 - life advice
