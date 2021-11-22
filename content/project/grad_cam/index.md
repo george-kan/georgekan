@@ -4,7 +4,7 @@ external_link: https://rstudio.github.io/distill/
 image:
   caption: Photo by <a href="https://unsplash.com/@sniv?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Shirly Niv Marton</a> on <a href="https://unsplash.com/s/photos/chess?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   focal_point: Smart
-summary: Layer visualisation for a Resnet50 model using hooks from Pytorch and Grad-CAM
+summary: Layer visualisation for a Resnet50 model using hooks from Pytorch and Grad-CAM.
 tags:
 - Python
 - PyTorch

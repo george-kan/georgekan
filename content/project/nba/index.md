@@ -4,7 +4,7 @@ external_link: https://rstudio.github.io/distill/
 image:
   #caption: '[Hex by Julie Jung](https://www.jungjulie.com/)'
   focal_point: Smart
-summary: Feature engineering and selection for predicting regular season NBA games with CatBoost
+summary: Feature engineering and selection for predicting regular season NBA games with CatBoost.
 tags:
 - Python
 - data visualisation

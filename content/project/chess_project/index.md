@@ -4,7 +4,7 @@ external_link: https://rstudio.github.io/distill/
 image:
   #caption: '[Hex by Julie Jung](https://www.jungjulie.com/)'
   focal_point: Smart
-summary: EDA and predictive modeling of games played on [lichess](lichess.org) in the month of September 2020
+summary: EDA and predictive modeling of games played on [lichess](lichess.org) in the month of September 2020.
 tags:
 - R
 - data analysis
