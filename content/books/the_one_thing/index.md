@@ -16,17 +16,17 @@ title: The ONE Thing
 <p style="color:purple;font-size:300%;margin:0;padding-top:0;padding-bottom:0"> &starf;&starf;&starf;&starf;&star; </p>
 
 
-# 🚀 The Book in 3 Sentences
+<p style="font-size:300%;margin: 0px;padding: 0px;color:#0b4008">🚀 The Book in 3 Sentences </p>
 
 - Extraordinary results come from unrelenting focus on ONE thing
 - Live your life purposefully, question and improve constantly  
 - 20% of the effort produces 80% of the results, everything does not matter equally  
 
-# Who Should Read It?
+<p style="font-size:300%;margin: 0px;padding: 0px;color:#0b4008"> Who Should Read It? </p>
 
 Predominantly a productivity book, I would recommend it to people aiming to get more primarily out of their work and secondarily out of their life. It is a short and generalizable book (the advice is not targeted at specific professions or lifestyles) which makes it suitable for a broader audience. 
 
-# ☘️ How the Book Changed Me
+<p style="font-size:300%;margin: 0px;padding: 0px;color:#0b4008">☘️ How the Book Changed Me </p>
 
 <aside>
 💡 How my life / behaviour / thoughts / ideas have changed as a result of reading the book.
@@ -37,7 +37,7 @@ Predominantly a productivity book, I would recommend it to people aiming to get 
 - Time blocking is a habit I have fully embraced, and I use my morning hours for the most challenging task of the day
 - I plan on allocating more time into planning yearly/monthly/weekly goals
 
-# ✍️ My Top 3 Quotes
+<p style="font-size:300%;margin: 0px;padding: 0px;color:#0b4008">✍️ My Top 3 Quotes </p>
 
 *Don't let small thinking cut your life down to size. Think big, aim high, act bold. And see just how big you can blow up your life.*  
 
@@ -45,7 +45,7 @@ Predominantly a productivity book, I would recommend it to people aiming to get 
 
 *Who we are and where we want to go determine what we do and what we accomplish. A life lived on purpose is the most powerful of all — and the happiest.*
 
-# 📒 Summary in My Own Words
+<p style="font-size:300%;margin: 0px;padding: 0px;color:#0b4008">📒 Summary in My Own Words </p>
 
 **Chapter 1: The ONE Thing**
 

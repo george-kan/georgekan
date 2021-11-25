@@ -15,30 +15,30 @@ title: The Psychology of Money
 <p style="margin:0; "><img src="featured-hex.jpg"></p>
 <p style="color:purple;font-size:300%;margin:0;padding-top:0;padding-bottom:0"> &starf;&starf;&starf;&starf;&starf; </p>
 
-# 🚀 The Book in 3 Sentences
+<p style="font-size:300%;margin: 0px;padding: 0px;color:#0b4008">🚀 The Book in 3 Sentences </p>
 
 1. Money and investing are emotional topics and therefore optimal allocation is really person-specific
 2. Every investor's best friends are frugality, self-control and a long time horizon for compounding to work its miracles
 3. Dictating how you spend your time is the greatest thing that money can buy
 
-## Who Should Read It?
+<p style="font-size:300%;margin: 0px;padding: 0px;color:#0b4008">Who Should Read It? </p>
 
 This is an amazing book that can help just about anybody. The lessons are presented in a very easy to follow manner with clear narratives. Even if not all advice in the book is applicable to you, I am willing to bet you will get value out of reading it.
 
-# ☘️ How the Book Changed Me
+<p style="font-size:300%;margin: 0px;padding: 0px;color:#0b4008">☘️ How the Book Changed Me </p>
 
 How my life / behaviour / thoughts / ideas have changed as a result of reading the book.
 
 - Accepting that financial planning is not 100% an optimisation game but has to account for the emotional component helped me improve my decision making
 - Margin of safety is always in the back of my mind in any financial decision
 
-# ✍️ My Top 3 Quotes
+<p style="font-size:300%;margin: 0px;padding: 0px;color:#0b4008">✍️ My Top 3 Quotes </p>
 
 - More than I want big returns, I want to be financially unbreakable. And if I’m unbreakable I actually think I’ll get the biggest returns, because I’ll be able to stick around long enough for compounding to work wonders.
 - The highest form of wealth is the ability to wake up every morning and say, “I can do whatever I want today.”
 - You might think you want an expensive car, a fancy watch, and a huge house. But I’m telling you, you don’t. What you want is respect and admiration from other people, and you think having expensive stuff will bring it. It almost never does—especially from the people you want to respect and admire you.
 
-# 📒 Summary - 1 sentence per chapter
+<p style="font-size:300%;margin: 0px;padding: 0px;color:#0b4008">📒 Summary - 1 sentence per chapter </p>
 
 **Chapter 1: No One’s Crazy**
 

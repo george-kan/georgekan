@@ -16,17 +16,17 @@ title: Atomic Habits
 <p style="color:purple;font-size:300%;margin:0;padding-top:0;padding-bottom:0"> &starf;&starf;&starf;&starf;&starf; </p>
 
 
-# 🚀 The Book in 3 Sentences
+<p style="font-size:300%;margin: 0px;padding: 0px;color:#0b4008"> 🚀 The Book in 3 Sentences </p>
 
 1. Big goals are achieved one small habit at a time
 2. Motivation is an unreliable resource, so try to embrace boredom and remove friction from good choices
 3. Focus on creating a life-process not life-goals
 
-# Who Should Read It?
+<p style="font-size:300%;margin: 0px;padding: 0px;color:#0b4008"> # Who Should Read It? </p>
 
 This book is a great read for anyone wanting to improve their productivity and in general improve their life. It offers really useful and practical advice as to how to structure you life to nurture new good habits and break bad ones.
 
-# ☘️ How the Book Changed Me
+<p style="font-size:300%;margin: 0px;padding: 0px;color:#0b4008"> ☘️ How the Book Changed Me </p>
 
 How my life / behaviour / thoughts / ideas have changed after reading the book.
 
@@ -34,13 +34,13 @@ How my life / behaviour / thoughts / ideas have changed after reading the book.
 - The motto "Consistency beats perfection" which for me was one of the messages in the book, has been really helpful to keep in mind during busy days
 - Making a habit satisfying by adding a small treat or some YouTube watching has worked great so far!
 
-# ✍️ My Top 3 Quotes
+<p style="font-size:300%;margin: 0px;padding: 0px;color:#0b4008"> ✍️ My Top 3 Quotes </p>
 
 - *The people with the best self-control are typically the ones who need to use it the least. It’s easier to practice self-restraint when you don’t have to use it very often.*
 - *Desire is the difference between where you are now and where you want to be in the future. Even the tiniest action is tinged with the motivation to feel differently than you do in the moment.*
 - *We are limited by where our habits lead us. This is why mastering the decisive moments throughout your day is so important. Each day is made up of many moments, but it is really a few habitual choices that determine the path you take. These little choices stack up, each one setting the trajectory for how you spend the next chunk of time.*
 
-# 📒 Chapter Notes
+<p style="font-size:300%;margin: 0px;padding: 0px;color:#0b4008"> 📒 Chapter Notes </p>
 
 **Chapter 1: The Surprising Power of Tiny Habits**
 
