@@ -16,7 +16,8 @@ title: The Simple Path to Wealth
 <p style="margin:0; "><img src="featured-hex.jpg"></p>
 <p style="color:purple;font-size:300%;margin:0;padding-top:0;padding-bottom:0"> &starf;&starf;&starf;&starf;&starf; </p>
 
-<p style="font-size:300%;margin: 0px;padding: 0px;color:#0b4008">🗒 My take </p>
+<p style="font-size:300%;margin: 0px;padding: 0px;color:#0b4008">🗒 My take </p>  
+
 J.L.Collins has produced a great book, which, true to its name, is a very simple path to wealth. The strategies and suggestions are straightforward and backed by reasonable arguments.
 
 The concept of having enough money on the side (F-you money) that grants you the flexibility to be selective about which projects/work to pursue is a great concept that I try to adhere to. Also all the warnings that investing success does not come down to intelligence or complicated products, but to low costs and reigning in our psychology. 
