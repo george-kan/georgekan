@@ -7,7 +7,6 @@ tags:
   - statistics
 subtitle: ''
 excerpt: ''
-draft: yes
 series: ~
 layout: single
 ---
@@ -17,7 +16,7 @@ layout: single
 
 ### Introduction
 
-I decided after years of struggling with remembering statistical concepts that I have to try to explain them so that:  
+I decided after years of struggling to remember statistical concepts that I have to try to explain them so that:  
 1. I am forced to understand them better 😄  
 2. Anybody can read and comment useful ideas that I might have missed  
 3. I will be able to come back to my explanation once I forget the concept
