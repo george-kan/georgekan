@@ -2,11 +2,12 @@
 title: The Law of Large Numbers
 date: '2021-12-08'
 slug: []
-categories: []
+categories:
+  - statistics
 tags:
   - statistics
 subtitle: ''
-excerpt: ''
+excerpt: How the Law of Large Numbers is the key to move from averages to expectation.
 series: ~
 layout: single
 ---
@@ -18,7 +19,7 @@ layout: single
 
 I decided after years of struggling to remember statistical concepts that I have to try to explain them so that:  
 1. I am forced to understand them better 😄  
-2. Anybody can read and comment useful ideas that I might have missed  
+2. Anybody can read and comment which can offer useful insights that I might have missed  
 3. I will be able to come back to my explanation once I forget the concept
 
 Please note that this is not a very math heavy collection of posts, my goal is to get a better intuitive understanding of the concepts.  
@@ -27,7 +28,7 @@ With all that being said, this is the first post in my statistics series and it 
 
 ### Definition
 
-**The average of the results obtained from a large number of trials should be close to the expected value and will tend to become closer to the expected value as more trials are performed**
+**The Law of Large Numbers states that the average of the results obtained from a large number of trials should be close to the expected value and will tend to become closer to the expected value as more trials are performed**
 
 Let's try to map the words in the definition to mathematical constructions.
 
@@ -38,7 +39,7 @@ Here we assume that we are doing multiple trials coming from the same underlying
 We can model these trials as n random variables:
 $$ X_1, X_2, ..., X_n $$
 
-These variables are identically distributed (so all follow the same distribution) and they are independent (knowledge about the outcome of one of them does not provide any information about the others). More trials means higher `n`.
+These variables are identically distributed (so all follow the same distribution) and they are independent (knowledge about the outcome of one of them does not provide any information about the others). More trials means higher `n` (larger sample size).
 
 
 <span style="color:purple"> Average of the results </span>
@@ -68,7 +69,7 @@ We are going to see three examples of the Law of Large Numbers for the following
 2. Binomial (Discrete random variable)     
 3. My own distribution (I have not coined it yet but it's happening! 😄) (Mixed random variable) 
 
-**1. Trials from a standard normal distribution**
+**1. Samples from a standard normal distribution**
 
 In our first example, we assume the following:
 
@@ -78,13 +79,13 @@ Just as a reminder, this is what the standard normal looks like:
 
 <img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.png" width="672" />
 
-We perform 500 trials from this distribution. Let's see how the sample mean changes as the number of trials increases.
+Let's see how the sample mean changes as the sample size increases.
 
 
 
 ![](index_files/figure-html/unnamed-chunk-4-1.gif)<!-- -->
 
-In the annimated chart above we can see how the sample average changes as trials increase. At the beginning it is far from the expected value (marked in green) but as the number of trials grows larger it gets closer and closer. 
+In the annimated chart above we can see how the sample average changes as sample size increases. At the beginning it is far from the expected value (marked in green) but as the number of samples grows larger it gets closer and closer. 
 
 
 **2. Unbiased coin flip**
@@ -103,13 +104,13 @@ Mathematically, we assume the following:
 
 $$ X_1, X_2, ..., X_n \thicksim Ber(0.5)\ i.i.d.$$
 
-We perform 500 trials from this distribution. Let's see how the sample mean changes as the number of trials increases.
+Let's see how the sample mean changes as the number of samples increases.
 
 
 
 ![](index_files/figure-html/unnamed-chunk-7-1.gif)<!-- -->
 
-Again we see that as the number of trials increases, the sample mean approaches the expected value.
+Again we see that as the number of samples increases, the sample mean approaches the expected value.
 
 **3. Random distribution I came up with**
 
@@ -128,7 +129,7 @@ It's a good idea to check if the total probability sums to 1:
 
 $$ Total\ probability = 0.25*1 (rectangle\ area) + 0.75 = 1$$
 
-We perform again 500 trials from this distribution. Let's see how the sample mean changes as the number of trials increases.
+We take again 500 samples from this distribution. Let's see how the sample mean changes as the sample size increases.
 
 
 
@@ -139,8 +140,8 @@ Did I miscalculate the expectation of my own distribution or is the Law of Large
 
 Surprisingly neither! 
 
-The Law of Large Numbers does not state anything about the speed of convergence. It only states that as the number of trials gets larger, the sample mean will get closer and closer to the expectated value.  
-Let's try it again but with a higher number of trials this time: 
+The Law of Large Numbers does not state anything about the speed of convergence. It only states that as the number of trials gets larger, the sample mean will get closer and closer to the expected value.  
+Let's try it again but with a higher number of samples this time: 
 
 
 
