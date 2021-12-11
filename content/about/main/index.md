@@ -10,6 +10,12 @@ intro: |
   
 ---
 
+<span style="color:blue; font-size:40px"> **Statistics** </span>
+
+[StatQuest](https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw)
+Josh Starmer breaks down every statistical and data science related concept you can imagine into perfectly explained and wonderfully visualised pieces. I cannot recommend this channel highly enough, 
+it has helped me a lot in grasping multiple concepts.
+
 <span style="color:blue; font-size:40px"> **Chess** </span>
 
 [PowerPlayChess](https://www.youtube.com/user/PowerPlayChess)
@@ -30,10 +36,6 @@ Really funny chess clips of various streamers, players etc. 3-4 minutes at a tim
 Two brothers (Cam and Brendan) try to improve various aspects of their lives: Sports, focus, reading speed, calisthenics abilities, losing body fat, you name it!
 They have an entertaining way of describing their plan, difficulties and showing how they overcome them. My only question is always how do they gain the weight 
 back after their workout challenges but I think it comes down to sweets <span> &#128516; </span>
-
-<span style="color:black; font-size:20px">[Ali Abdaal](https://www.youtube.com/c/aliabdaal) </span>
-Ali is a doctor who is obsessed with productivity. He claims (but from what I have seen, it is probably true <span> &#128578;) </span> that he has read every 
-productivity book imaginable. Various tips about improving time management, efficiency, money allocation etc.
 
 <span style="color:blue; font-size:40px"> **Investing** </span>
 
