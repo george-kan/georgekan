@@ -8,7 +8,6 @@ tags:
   - statistics
 subtitle: ''
 excerpt: ''
-draft: yes
 series: ~
 layout: single
 ---
