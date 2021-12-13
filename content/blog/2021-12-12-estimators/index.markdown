@@ -104,7 +104,7 @@ A version of the Poisson distribution does look plausible given the problem and 
 
 So we can conclude the following regarding our modelling:
 1. We are assuming that the observed values in the sample are all coming from a Poisson(λ) distribution 
-2. We are assuming that The observed values are independent (reasonable assumption for passers-by)
+2. We are assuming that the observed values are independent (reasonable assumption for passers-by)
 
 Mathematically: $$ X_1, X_2, ..., X_n \sim Pois(\lambda)\ i.i.d. $$ where the Xi correspond to the number of passers-by in the first, second, third...etc. hour.
 
@@ -115,7 +115,7 @@ There are infinite Poisson distributions depending on the parameter λ that we c
 
 <img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-3-1.png" width="1152" />
 
-**This is the part where estimators come in. We need an estimator to estimate the parameter λ of the Poisson distribution that we selected.**
+**This is the part where estimators come in. We need an estimator to estimate the parameter λ of the Poisson distribution that we picked.**
 
 ### Let's select some estimators
 
