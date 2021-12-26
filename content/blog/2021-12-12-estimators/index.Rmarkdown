@@ -7,7 +7,7 @@ categories:
 tags:
   - statistics
 subtitle: ''
-excerpt: ''
+excerpt: 'What they are, why would we use them and how we would want them to be.'
 series: ~
 layout: single
 ---
