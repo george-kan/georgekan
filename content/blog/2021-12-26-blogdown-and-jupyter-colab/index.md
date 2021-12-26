@@ -11,7 +11,7 @@ tags:
   - Python
 subtitle: ''
 excerpt: 'How to integrate `blogdown` with `Jupyter`'
-draft: yes
+draft: no
 series: ~
 layout: single
 ---
