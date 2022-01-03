@@ -1,6 +1,5 @@
 ---
 title: Blogdown and Jupyter/Colab
-author: George Kanellos
 date: '2021-12-26'
 slug: []
 categories:
