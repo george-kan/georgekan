@@ -1,0 +1,337 @@
+---
+title: The Normal Distribution
+date: '2022-01-16'
+slug: []
+categories:
+  - statistics
+tags:
+  - statistics
+subtitle: ''
+excerpt: 'How to manipulate the normal distribution to calculate probabilities.'
+draft: no
+series: ~
+layout: single
+---
+
+```{r include=F}
+library(emo)
+library(ggplot2)
+library(gganimate)
+library(dplyr)
+library(scales)
+library(data.table)
+library(ggforce)
+library(ggpattern)
+
+theme_set(theme_minimal(base_size=25) +
+            theme(plot.title = element_text(size = 18, hjust = 0.5),
+                  axis.text = element_text(size=16),
+                  axis.title = element_text(size = 14),
+                  legend.text = element_text(size = 14),
+                  panel.grid.major = element_blank()))
+
+generate_poly <- function(quantile_start, quantile_end) {
+  # https://stackoverflow.com/questions/27898931/how-to-shade-a-graph-using-curve-in-r
+  x = seq(quantile_start, quantile_end, 0.01)
+  y = c(dnorm(x), 0, 0)
+  x = c(x, quantile_end, quantile_start)
+  return(data.frame(x=x, y=y))
+}
+
+
+```
+
+### Introduction
+
+This is the fourth post in my statistics series and this time we are going to focus on the normal distribution.  
+It is arguably the most important probability distribution in statistics and the key to understanding and modelling many phenomena. In this post, we will see what the normal is, how it can be manipulated and how to calculate areas under it.
+
+### (Brief) History lesson
+
+The first person to "discover" the normal distribution was Abraham de Moivre, an 18th century statistician. He was trying to find a good way to estimate probabilities in gambling and he came across the normal distribution as the limiting curve for the binomial.  
+In simpler terms, he noticed that if he plotted the number of heads that came out in repeated coin tosses he could draw a particular curve above the distribution. What he probably noticed looked like this:
+
+
+```{r echo =F}
+
+binom_dt = data.table(x = 0:10)
+binom_dt[, y := dbinom(x, 10, prob=0.5)]
+
+ggplot(binom_dt) +
+  geom_point(aes(x=x, y=y), size=4, color="lightblue") +
+  geom_segment(aes(x=x, xend=x, y=0, yend=y), size=1.5, color="lightblue") +
+  geom_function(fun = dnorm, args= list(mean=5, sd=1.6), size=1.2, color = muted("green")) +
+  scale_y_continuous(expand = expansion(mult = 0.02)) +
+  scale_x_continuous(labels = number_format(1), breaks = 0:20) + 
+  labs(title ="Curve above a binomial distribution", x="Number of heads in 10 coin tosses") +
+  theme(axis.title.y = element_blank(),
+        panel.grid.minor = element_blank())
+
+
+```
+
+After that first occurrence, it was observed in various calculations but it was formalised by Adrain and Gauss at the beginning of the 19th century, and this is how we came to this lovely formula:
+
+$$ \large f_X(x) = \frac 1 {\sigma \sqrt{2\pi}}e^{-\frac 1 2 (\frac {x-\mu} {\sigma})^2} $$
+
+This is the probability density function for a generic normal distribution $$ Ν(\mu, \sigma^2) $$ while the probability density function for the standard normal distribution (mean = 0 and variance = 1) is:
+
+$$ \large \phi(x) = \frac 1 {\sqrt{2\pi}}e^{-\frac {x^2} 2 } $$
+
+Thankfully we have computers to do the calculations for us and we do not need to work too much with these formulas. 
+
+### Calculating probabilities of a standard normal
+
+For many applications (including statistics) we need to be able to calculate probabilities under the standard normal in order to answer questions such as:  
+*"What is the probability that a value of a standard normal will be less than -1?"*    
+The first step is to translate this question into a mathematical formulation. What we are looking for is: $$ P[Z \le -1] $$
+
+Lets visualise the probability:
+
+```{r echo=F}
+fill_df = generate_poly(-4, -1)
+ggplot(data.frame(x = seq(-4,4,0.01)), aes(x)) +
+  geom_function(fun = dnorm, aes(x=seq(-4,4,0.01))) +
+  geom_polygon(data = fill_df, aes(x = x, y= y), fill = "blue") +
+  scale_x_continuous(breaks = -3:3) +
+  labs(title = "Area under the standard normal curve below -1") + 
+  theme(axis.title = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_line(size = 0.1))
+```
+
+The area marked in blue corresponds to the probability that we are interested in. To calculate such area we can use the lessons from calculus and integrate the probability density function from negative infinity until -1.  
+All good so far, but now we hit a big obstacle: There is no closed form solution for the integral of the normal distribution. Fortunately, we have various numerical approximations for it that can help us perform the calculation. 
+
+To obtain a result, we can use the `pnorm` function in R (or equivalent functions in other statistical software) or we could also use a [standard table](https://en.wikipedia.org/wiki/Standard_normal_table) which brings us to the following result: 
+
+*The probability that a value from a standard normal distribution will be less than -1 is: `r round(pnorm(-1), 3)`*
+
+
+
+**Cumulative Distribution Function**
+
+This operation of calculating the probability that a sample from a distribution will fall below certain value x is very common and there is a specific function that takes as input such a value x and returns the probability $$ P[X \le x] $$ This function is called <span style="color:purple">Cumulative Distribution Function</span> or CDF for short and is defined as follows:
+$$ F_X(x) = P[X \le x] $$
+
+The typical notation for the CDF of the standard normal distribution is to use the letter Φ: $$ \Phi(x) = P[Z \le x]  $$
+
+```{r echo=F}
+ggplot(data.frame(x = c(-4, 4)), aes(x)) + 
+  geom_function(fun = pnorm, size=  1.4, color = "blue") +
+  labs(y = "\u03D5(x)", title = "CDF of a standard normal distribution") +
+  theme(axis.title.x = element_blank())
+```
+
+**Properties of the CDF**  
+
+Before moving on, it's good to try and understand some of the properties of the CDF:
+
+$$ 0 \le \Phi(x) \le 1 $$ 
+
+This one is quite understandable given that the CDF returns a probability and as we know any probability is bounded between 0 and 1.
+
+
+$$ \lim\limits_{x \rarr -\infty}\Phi(x)=0$$
+This property simply states that the probability that a sample value from a standard normal will be less than a very small number is essentially zero. To be even more practical about it, we can use `pnorm` to calculate the probability that the value of a standard normal will fall below -5:
+
+*The probability that a value from a standard normal distribution will be less than -5 is: `r format(pnorm(-5), scientific=F)`*
+
+Clearly we do not need to reach negative infinity for the probability to be essentially zero. 
+
+
+$$ \lim\limits_{x \rarr \infty}\Phi(x)=1$$
+
+The other side of the property above, the probability that a value from a standard normal will be below certain gigantic number is essentially 1. Again let's be practical and use `pnorm` to calculate what is the probability that the value of a standard normal will fall below 5:
+
+*The probability that a value from a standard normal distribution will be less than 5 is: `r pnorm(5)`*
+
+Similarly to the previous property, it becomes obvious that we do not need to reach infinity for the probability to be essentially equal to 1.
+
+Using this newly acquired notation we can rewrite our original computation $$ P[Z \le -1] = \Phi(-1) $$
+
+All probability calculations for a standard normal that we might need can be performed by employing some clever tricks using its CDF and symmetry.
+
+#### Probability of a value above x
+
+We might want to calculate what is the probability that we will get a value greater than 2: $$ P[X \ge 2] $$
+Let's first visualise the probability we are interested in:
+
+
+```{r echo=F}
+fill_df = generate_poly(2, 4)
+ggplot(data.frame(x = seq(-4,4,0.01)), aes(x)) +
+  geom_function(fun = dnorm, aes(x=seq(-4,4,0.01))) +
+  geom_polygon(data = fill_df, aes(x = x, y= y), fill = "blue") +
+  labs(title = "Area under the standard normal curve above 2") +
+  theme(axis.title = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_line(size = 0.1))
+```
+
+At first this looks challenging as we only have information for probabilities of the sort $$ P[Z \le x] $$ but not for $$ P[Z \ge x] $$ 
+
+***Using symmetry***
+
+The first trick we can use is the fact that the standard normal distribution is symmetric around 0, which means that the probability of a value being greater than 2 is the same as the probability of a value being less than -2. 
+
+
+```{r echo=F}
+fill_df = generate_poly(2, 4)
+
+fill_df2 = generate_poly(-4, -2)
+
+ggplot(data.frame(x = seq(-4,4,0.01)), aes(x)) +
+  geom_function(fun = dnorm, aes(x=seq(-4,4,0.01))) +
+  geom_polygon(data = fill_df, aes(x = x, y= y), fill = "blue") +
+  geom_polygon_pattern(data = fill_df2, aes(x = x, y= y),
+                      pattern_spacing = 0.05, 
+                      pattern_density = 0.6, 
+                      pattern_fill    = 'lightblue', 
+                      pattern_colour  = '#002366',
+                      pattern_angle   = 45) +
+  labs(title = "The two areas are the same") +
+  theme(axis.title = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_line(size = 0.1))
+```
+
+In mathematical notation this can be written as $$ P[Z \ge 2] = P[Z \le -2] = \Phi(-2) $$ 
+
+***Using total probability***
+
+We know from the basics of probability that the total probability under the standard normal curve is equal to 1. We can make use of this fact in order to transform the calculation. 
+
+
+```{r echo=F}
+fill_df1 = generate_poly(-4, 4)
+fill_df2 = generate_poly(-4, 2)
+
+ggplot(data.frame(x = seq(-4,4,0.01)), aes(x)) +
+  geom_function(fun = dnorm, aes(x=seq(-4,4,0.01))) +
+  geom_polygon(data = fill_df1, aes(x = x, y= y), fill = "blue") +
+  geom_polygon_pattern(data = fill_df2, aes(x = x, y= y),
+                       fill = "blue",
+                       pattern_spacing = 0.1, 
+                      pattern_density = 0.5, 
+                      pattern_fill    = "red", 
+                      pattern_colour  = 'red',
+                      pattern_angle   = 45,
+                      alpha = 0.5,
+                      pattern_alpha = 0.5) +
+  labs(title = "Subtracting the shaded area from the total") +
+  theme(axis.title = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_line(size = 0.1))
+```
+
+$$ P[Z \ge 2] = 1-P[Z \le 2] = 1 - \Phi(2) $$
+
+
+#### Probability of a value between x1 and x2
+
+Now comes the trickier calculation:  
+*"What is the probability that a value from a standard normal will be between -2 and 1?"*  
+Let's start by visualising the area we are interested in.
+
+```{r echo=F}
+fill_df = generate_poly(-2, 1)
+ggplot(data.frame(x = seq(-4,4,0.01)), aes(x)) +
+  geom_function(fun = dnorm, aes(x=seq(-4,4,0.01))) +
+  geom_polygon(data = fill_df, aes(x = x, y= y), fill = "blue") +
+  scale_x_continuous(breaks = -4:4) +
+  labs(title = "Area under the standard normal between -1 and 2") +
+  theme(axis.title = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_line(size = 0.1))
+```
+
+We can do some minor adjustments to the last trick we used with the total probability in order to make the calculation. If you look at the chart carefully you will notice that the probability we are interested in is the probablity that a value is below 1 minus the probability that a value is below -2. Pictorially:
+
+```{r echo=F}
+fill_df1 = generate_poly(-4, 1)
+fill_df2 = generate_poly(-4, -2)
+
+ggplot(data.frame(x = seq(-4,4,0.01)), aes(x)) +
+  geom_function(fun = dnorm, aes(x=seq(-4,4,0.01))) +
+  geom_polygon(data = fill_df1, aes(x = x, y= y), fill = "blue") +
+  geom_polygon_pattern(data = fill_df2, aes(x = x, y= y),
+                       fill = "blue",
+                       pattern_spacing = 0.1, 
+                      pattern_density = 0.8, 
+                      pattern_fill    = "red", 
+                      pattern_colour  = 'red',
+                      pattern_angle   = 45,
+                      alpha = 0.5,
+                      pattern_alpha = 0.5) +
+  scale_x_continuous(breaks = -4:4) +
+  labs(title = "Subtracting the shaded area from the area left of 1") +
+  theme(axis.title = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_line(size = 0.1))
+
+```
+
+$$ P[-2 \le Z \le 1] = P[Z \le 1] - P[Z \le -2] = \Phi(1) - \Phi(-2) $$
+
+### Reversing the procedure - How to find X
+
+So far we have looked into cases where we had to find a probability based on certain values of x.  
+What should we do if someone reverses the problem and tells us to find x such that the probability of a value from standard normal falling below x is equal to a certain number. More succinctly: 
+
+$$ \text{Find x such that:}\ P[Z \le x]=\Phi(x) = 0.159 $$
+
+```{r warning=F, echo=F}
+fill_df = generate_poly(-4, -1)
+ggplot(data.frame(x = seq(-4,4,0.01)), aes(x)) +
+  geom_function(fun = dnorm, aes(x=seq(-4,4,0.01))) +
+  geom_polygon_pattern(data = fill_df, aes(x = x, y= y),
+                       fill = "white",
+                       pattern_spacing = 0.1, 
+                      pattern_density = 0.8, 
+                      pattern_fill    = "black", 
+                      pattern_colour  = 'black',
+                      pattern_angle   = 45,
+                      alpha = 0.5,
+                      pattern_alpha = 0.5) +
+  annotate("text", x = -1.5, y = 0.06, label = "0.159", size = 6) +
+  geom_curve(aes(x = 0.15, xend=-1, y=0.08, yend=0), arrow = arrow(length = unit(0.07, "inch")), size = 0.75, 
+             color = "green", curvature = 0.3) +
+  annotate("text", x = 0.65, y = 0.1, label = "This is what we\n are looking for", size = 4) +
+  scale_x_continuous(breaks = c(-1, 0), labels = c("x", 0)) +
+  scale_y_continuous(expand = expansion(0,0)) +
+  labs(title = "Find x such that the area on the left of x is 0.159") + 
+  theme(axis.title = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_line(size = 0.1),
+        axis.text.x = element_text(colour = c('green', 'black')))
+```
+
+Essentially, what we are trying to achieve here is the inverse of what we were trying to do before.  
+Previously we used the CDF in order to calculate the probability on the left hand side of x.  
+Now we know the probability and we are trying to find x such that the probability on the left of it is equal to the known value.
+
+Luckily there is a function we can use that does exactly this and it is called the **Inverse Distribution Function**. 
+Provided that both the CDF and the inverse exist the following equation holds:
+
+$$ F_X(x) = q \Harr F^{-1}(q) = x$$
+ 
+To find the value of x we are looking for we can use the `qnorm` function in R (or equivalent functions in other statistical software) or we could also use a [standard table](https://en.wikipedia.org/wiki/Standard_normal_table): 
+
+*The value x such that the probability on the left side of x is 0.159 is: `r round(qnorm(0.159), 2)`*
+
+### Why would these calculations be useful?
+
+It is important to mention why these calculations are relevant for practical purposes. After all, the normal distribution is simply one distribution, there are countless others.  
+The main reason these calculations are needed is the [Central Limit Theorem](https://georgekan.com/blog/2021-12-09-the-central-limit-theorem/), which allows us to describe the normalised distribution of the sample mean for any arbitrary distribution by using the normal distribution.  
+In practical terms, in order to perform hypothesis testing, calculate confidence intervals and many other computations we need to be able to calculate probabilities for the distribution we are interested in. Most of the time, this distribution is either (i) unknown or (ii) difficult to manipulate. Therefore, we resort to the CLT in order to be able to work with the standard normal distribution and draw conclusions for the original distribution as we shall see in future posts.
+
+
+
+### Useful resources
+
+https://en.wikipedia.org/wiki/Normal_distribution
+https://onlinestatbook.com/2/normal_distribution/history_normal.html
+https://en.wikipedia.org/wiki/Cumulative_distribution_function
+https://en.wikipedia.org/wiki/Cumulative_distribution_function#Inverse_distribution_function_(quantile_function)
+
