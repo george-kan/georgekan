@@ -1,16 +1,18 @@
 ---
-title: Confidence intervals
-date: '2022-01-02'
+title: Confidence intervals (Part 1)
+date: '2022-01-23'
 slug: []
 categories:
   - statistics
 tags:
   - statistics
 subtitle: ''
-excerpt: ''
-draft: yes
+excerpt: 'How to provide measurement ranges through confidence intervals.'
+draft: no
 series: ~
 layout: single
+header-includes:
+  - \usepackage{cancel}
 ---
 
 ```{r include=F}
@@ -38,7 +40,7 @@ But this is usually not enough. Being able to say that my estimate for the mean 
 
 This is where the confidence interval comes into play.  
 
-*A 1-α confidence interval for a parameter θ is an interval Cn = (A, B) where A = A(X1,...,Xn) and B = B(X1,...,Xn) are functions of the data such that* $$ P_{\theta}(\theta ∈ Cn) ≥ 1 − α , \forall θ ∈ Θ$$
+***A 1-α confidence interval for a parameter θ is an interval Cn = (A, B) where A = A(X1,...,Xn) and B = B(X1,...,Xn) are functions of the data such that*** $$ P_{\theta}(\theta ∈ Cn) ≥ 1 − α , \forall θ ∈ Θ$$
 In words, (A, B) traps θ with probability 1 − α.
 
 Let's try to dig deeper into some of the components of the definition.
@@ -52,6 +54,7 @@ We define the interval in terms of A and B, which *are both functions of the sam
 
 It is important to note that we can construct many confidence intervals. The degree of certainty that the interval has is quantified through the number 1-α. 
 For example, if I am 5% certain in my estimate, weeeeell this is probably not a very useful estimate 😅.  
+
 Some of the usual values that α takes are 5% (confidence interval 1-α=95%) or 2.5% (confidence interval 1-α=97.5%). Most of the time when constructing an interval we solve for equality (=1-α) in order to find the tightest interval that achieves 1-α confidence.
 
 ### How does one construct a confidence interval?
@@ -89,7 +92,7 @@ It needs to be stressed again that **A and B are functions of the samples** obta
 
 ### Step 1: Find a (good!) estimator for θ
 
-The first step for creating a confidence interval around an estimate is to find a way to generate said estimate. We need to find a good estimator for θ (see my previous post about [estimators](https://georgekan.com/blog/2021-12-12-estimators/) for more details).
+The first step for creating a confidence interval is to generate an estimate for the quantity we are interested in. We need to find a good estimator for θ (see my previous post about [estimators](https://georgekan.com/blog/2021-12-12-estimators/) for more details).
 
 Since E[X] = θ and we know that the sample mean is a good estimator for the expectation we can select it. The sample mean is an unbiased estimator and it is also consistent based on the [Law of Large Numbers](https://georgekan.com/blog/2021-12-08-the-law-of-large-numbers/). 
 
@@ -100,7 +103,7 @@ $$ \widehat{\theta}=\overline{X_n} $$
 *Can we say something about the distribution of the sample mean?* Yes!  
 Based on the [Central Limit Theorem](https://georgekan.com/blog/2021-12-09-the-central-limit-theorem/) as the sample size grows larger the normalised sample mean follows a standard normal distribution asymptotically.
 
-So now we have an estimator (the sample mean) for the unknown quantity θ and we would like to construct an interval using that estimator which will be the confidence interval we are looking for. Coming back to our previous definition:
+So now we have an estimator (the sample mean) for the unknown quantity θ and we would like to construct an interval using that estimator which will be the **asymptotic** confidence interval we are looking for. Coming back to our previous definition:
 
 $$ C_n = (A, B) = [\widehat{\theta}-d, \widehat{\theta}+d]=[\overline{X_n}-d, \overline{X_n}+d] $$
 
@@ -110,7 +113,10 @@ Based on the definition of the confidence interval and the results of step 1 we 
 
 
 $$ P_{\theta}(\overline{X_n}+d \ge \theta \ge \overline{X_n}-d) = 1-\alpha , \forall θ ∈ Θ $$
-In order to find d, we need to make use of the CLT and in particular we need to rearrange the inequality inside the probability as follows:
+To be more precise, given that we are working with an asymptotic confidence interval, we are looking for an interval that fullfills the condition above as n grows larger:
+
+$$ \lim_{n \rarr \infty}P_{\theta}(\overline{X_n}+d \ge \theta \ge \overline{X_n}-d) = 1-\alpha , \forall θ ∈ Θ $$
+In order to find d, we need to make use of the CLT and in particular we need to rearrange the inequality inside the probability to create the normalized version of the sample mean:
 
 $$ P_{\theta}(\overline{X_n}+d \ge \theta \ge \overline{X_n}-d) = P_{\theta}(d \ge \theta-\overline{X_n} \ge -d)=P_{\theta}(d \ge \overline{X_n}-\theta \ge -d) = $$ 
 $$P_{\theta}(\frac {\sqrt{n}d} {\sqrt{1/12}}\ge \sqrt{n} \frac {\overline{X_n}-\theta} {\sqrt{1/12}} \ge \frac {-\sqrt{n}d} {\sqrt{1/12}})$$
@@ -126,7 +132,7 @@ $$ P(\frac {\sqrt{n}d} {\sqrt{1/12}}\ge Z \ge \frac {-\sqrt{n}d} {\sqrt{1/12}}) 
 We would like this probability to be equal to 1-α.
 
 $$ P(\frac {\sqrt{n}d} {\sqrt{1/12}}\ge Z \ge \frac {-\sqrt{n}d} {\sqrt{1/12}}) = 1-α $$
-To simplify calculations, we set $$ \frac {\sqrt{n}d} {\sqrt{1/12}} = e $$ and we have:
+To simplify calculations, we set $$ \frac {\sqrt{n}d} {\sqrt{1/12}} = e $$ and we have (have a look at my previous post about [the normal distribution](https://georgekan.com/blog/2022-01-16-the-normal-distribution/) in case these calculations here seem fuzzy):
 $$ P(e \ge Z \ge -e) = 1-α \hArr \Phi(e) - \Phi(-e)=1-α \hArr 2\Phi(e)-1=1-α \hArr$$ 
 $$ \Phi(e)=1-\frac α 2 \hArr e=\Phi^{-1}(1-\frac α 2)=q_{\alpha/2}$$
 
@@ -137,7 +143,7 @@ $$ \frac {\sqrt{n}d} {\sqrt{1/12}} = q_{\alpha/2}\hArr d= \frac {q_{\alpha/2}} {
 The only thing we have left is to put all the ingredients together:
 
 Our estimate for θ is: $$ \overline{X_n} $$
-The 1-α confidence interval for θ is: $$ C_n = (A, B) = [\overline{X_n}-\frac {q_{\alpha/2}} {\sqrt{12n}}, \overline{X_n}+\frac {q_{\alpha/2}} {\sqrt{12n}}] $$
+The 1-α **asymptotic** confidence interval for θ is: $$ C_n = (A, B) = [\overline{X_n}-\frac {q_{\alpha/2}} {\sqrt{12n}}, \overline{X_n}+\frac {q_{\alpha/2}} {\sqrt{12n}}] $$
 
 ### In action
 
@@ -188,9 +194,13 @@ u_lim = round(xn_bar+q/(sqrt(12*50)), 2)
 ***The interval upper limit is `r u_lim`***
 
 
-Putting these values back into the formula we derived above, we can say that a 95% confidence interval for the unknown parameter θ is:
+Putting these values back into the formula we derived above, we can say that a 95% **asymptotic** confidence interval for the unknown parameter θ is:
 
-$$ C_n = (A, B) = [1.45, 1.61] $$
+$$ [1.45, 1.61] $$
+
+<span style="color:red"> Note that we cannot make probabilistic statements about these numbers, which means we cannot say: </span> $$ \cancel{P(1.61 \ge \theta \ge 1.45) = 1-\alpha , \forall θ ∈ Θ}$$
+
+The reason is that once we have a realisation (numbers) for the confidence interval, the probability that the unknown θ is in the realised confidence interval is either 0 (θ is not in that interval) or 1 (θ is in that interval). **θ is unknown but it is not random!**
 
 ### Interpreting the confidence interval
 
@@ -240,7 +250,14 @@ ggplot(interval_df, aes(y = Interval_n)) +
 
 ```
 
-The intervals marked in green contain the the true value of θ which in this example is 1.5. There are 5/100 intervals that do not contain the value and I have marked them in red. Please note that the value of 5 does match our expectation that 95 of the intervals would contain the true value but this is not always the case, it could have been 4 or 6 or some other number close to that.
+The intervals marked in green contain the true value of θ which in this example is 1.5. There are 5/100 intervals that do not contain the value and I have marked them in red. Please note that the value of 5 does match our expectation that 95 of the intervals would contain the true value but this is not always the case, it could have been 4 or 6 or some other number close to that.
+
+### Useful resources
+
+[Wikipedia](https://en.wikipedia.org/wiki/Confidence_interval)  
+[All of statistics book](https://www.amazon.com/All-Statistics-Statistical-Inference-Springer/dp/1441923225)  
+[Fundamentals of statistics course at edX](https://www.edx.org/course/fundamentals-of-statistics)
+
 
 
 
